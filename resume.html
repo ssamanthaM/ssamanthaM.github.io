@@ -35,14 +35,20 @@
   .edu b { color: var(--ink); }
 
   @media print {
-    @page { margin: 14mm 15mm; }
-    body { font-size: 10.5pt; line-height: 1.42; }
+    @page { margin: 11mm 13mm; }
+    body { font-size: 9.4pt; line-height: 1.3; }
     .cv { max-width: none; }
-    .cv__head { border-color: #000; }
-    .cv h2 { color: #000; border-bottom-color: #999; margin-top: 1.2rem; }
-    .cv li { font-size: 10pt; margin-bottom: .18rem; color: #000; }
-    .cv__summary, .cv__skills, .edu, .job__meta { color: #000; }
-    .job { margin-bottom: .8rem; }
+    .cv__head { border-color: #000; padding-bottom: .6rem; margin-bottom: .9rem; }
+    .cv__head h1 { font-size: 21pt; margin-bottom: .25rem; }
+    .cv__contact { font-size: 8.4pt; }
+    .cv h2 { color: #000; border-bottom-color: #999; margin: .85rem 0 .45rem; font-size: 8.2pt; padding-bottom: .2rem; }
+    .cv h3 { font-size: 11pt; }
+    .cv li { font-size: 9.2pt; margin-bottom: .1rem; color: #000; }
+    .cv ul { padding-left: .95rem; }
+    .cv__summary, .cv__skills, .edu, .job__meta { color: #000; font-size: 9.2pt; }
+    .job__meta { margin-bottom: .3rem; }
+    .edu { gap: .3rem; }
+    .job { margin-bottom: .55rem; }
     .print-hide { display: none !important; }
     .hero { padding: 0 !important; }
     .hero::before { display: none; }
@@ -76,12 +82,12 @@
       <div class="print-hide" style="max-width:860px;margin:0 auto 2.5rem">
         <p class="eyebrow">Résumé</p>
         <div class="btn-row">
-          <button class="btn" type="button" onclick="window.print()">Print / save as PDF</button>
-          <a class="btn btn--ghost" href="contact.html">Get in touch</a>
+          <a class="btn" href="assets/docs/SVMarkham-Resume.pdf" download>Download PDF</a>
+          <button class="btn btn--ghost" type="button" onclick="window.print()">Print this page</button>
         </div>
         <p style="font-size:.9rem;color:var(--ink-3);margin-top:1rem">
-          This page is styled to print cleanly to two pages — use your browser's print dialog and choose
-          “Save as PDF”. An operations-focused version of the résumé is available on request.
+          The PDF is this exact page, two pages long. An operations-focused version of the résumé, and the full
+          text of any research listed under <a href="writing.html">Writing</a>, are available on request.
         </p>
       </div>
 
@@ -188,26 +194,20 @@
 
         <h2>Research &amp; applied AI</h2>
         <ul>
-          <li><strong>Handa — model guardrails &amp; escalation.</strong> Specified what the model may answer, what
-            routes to a human reviewer and what it must refuse outright, for users facing wage theft, passport
-            confiscation and contract substitution with no legal recourse. Prompt design, output evaluation for
-            accuracy and bias, and an escalation path built on the assumption the model will sometimes be
-            confidently wrong.</li>
-          <li><strong>WPS Maritime Tracker — incident-to-award evidentiary system.</strong> 16 structured case
-            records of West Philippine Sea incidents, each mapped to UNCLOS articles, COLREGs rules and holdings of
-            the 2016 South China Sea Arbitral Award, with Berkeley Protocol-informed provenance, an append-only
-            SHA-256 custody chain anchored via OpenTimestamps, and a publication whitelist that releases only
-            adjudicated records. A Claude pipeline structures open-source reporting into the schema; every record it
-            produces enters as an unverified draft requiring human adjudication before publication. Built for the
-            Solicitor General's office, Coast Guard legal and international counsel.</li>
-          <li><strong>the Margins Studio — autonomous agent with a moderation gate.</strong> Full pipeline from
-            Claude Vision analysis to automated publishing, with a pre-publish enforcement layer and a weekly
-            evaluation loop. Practical experience with the core agentic-safety problem.</li>
-          <li><strong>“The Canary in the Dragnet” (2026).</strong> Original policy research arguing migrants are the
-            first population on whom AI surveillance infrastructure is normalised and tested, making migrant-rights
-            failure a leading indicator of general AI governance failure. Submitted to the CHT Emerging Voices
-            Fellowship. Builds on the Passport Confiscation Matrix and a 2018 Paris thesis on Gulf states' ILO
-            circumvention.</li>
+          <li><strong>WPS Maritime Tracker — incident-to-award evidentiary system.</strong> 16 structured records of
+            West Philippine Sea incidents, each mapped to UNCLOS articles, COLREGs rules and 2016 Arbitral Award
+            holdings, with Berkeley Protocol-informed provenance, an append-only SHA-256 custody chain anchored via
+            OpenTimestamps, and a publication whitelist releasing only adjudicated records. A Claude pipeline
+            structures open-source reporting; every record it produces requires human adjudication before
+            publication.</li>
+          <li><strong>“The Canary in the Dragnet” (2026).</strong> Policy research arguing migrants are the first
+            population on whom AI surveillance infrastructure is normalised, making migrant-rights failure a leading
+            indicator of general AI governance failure. Submitted to the CHT Emerging Voices Fellowship; builds on
+            the Passport Confiscation Matrix and the 2018 Paris thesis.</li>
+          <li><strong>Columbia SIPA capstone for UN DESA (2025).</strong> Monitoring framework for Fourth
+            International Conference on Financing for Development commitments — baseline against the Addis Ababa
+            Action Agenda, legacy measurement gaps, SMART and proxy indicators mapped to institutional stakeholders
+            and data sources.</li>
           <li><strong>SolBound — incentive design prototype.</strong> Reward mechanics and abuse-resistance model for
             a sober-to-earn recovery application: rewarding a behaviour only the user can verify, without creating
             an exploit that falls hardest on the intended beneficiaries.</li>
@@ -266,7 +266,7 @@
         <ul>
           <li><a href="mailto:sa4292@columbia.edu">sa4292@columbia.edu</a></li>
           <li><a href="https://www.linkedin.com/in/samantha-vargas-markham" rel="me noopener">LinkedIn</a></li>
-          <li><a href="resume.html">Résumé</a></li>
+          <li><a href="resume.html">Résumé</a> · <a href="assets/docs/SVMarkham-Resume.pdf">PDF</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
