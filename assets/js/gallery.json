@@ -1,0 +1,352 @@
+[
+ {
+  "slug": "portrait-official",
+  "cat": "portrait",
+  "caption": "Official portrait, Philippine House of Representatives.",
+  "w": 466,
+  "h": 700
+ },
+ {
+  "slug": "oath-of-office",
+  "cat": "government",
+  "caption": "Taking the oath of office. Elected at 26 to represent a 12-municipality district.",
+  "w": 700,
+  "h": 465
+ },
+ {
+  "slug": "plenary-floor",
+  "cat": "government",
+  "caption": "On the floor of the House of Representatives during plenary session.",
+  "w": 700,
+  "h": 465
+ },
+ {
+  "slug": "committee-work",
+  "cat": "government",
+  "caption": "Committee session, House of Representatives.",
+  "w": 700,
+  "h": 525
+ },
+ {
+  "slug": "hearing-nameplate",
+  "cat": "government",
+  "caption": "Committee hearing, House of Representatives.",
+  "w": 700,
+  "h": 449
+ },
+ {
+  "slug": "asec-plho",
+  "cat": "government",
+  "caption": "As Assistant Secretary, Presidential Legislative Liaison Office — the executive–legislature interface.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "committee-hearing",
+  "cat": "government",
+  "caption": "In committee at the House of Representatives, as Representative for Cagayan's 2nd District.",
+  "w": 700,
+  "h": 499
+ },
+ {
+  "slug": "russia-parliament",
+  "cat": "diplomacy",
+  "caption": "Meeting with the Russian Parliament — interparliamentary dialogue.",
+  "w": 700,
+  "h": 525
+ },
+ {
+  "slug": "aipa-delegation",
+  "cat": "diplomacy",
+  "caption": "ASEAN Inter-Parliamentary Assembly — Philippine delegation.",
+  "w": 700,
+  "h": 525
+ },
+ {
+  "slug": "aipa-panel",
+  "cat": "diplomacy",
+  "caption": "AIPA session on advancing parliamentary partnership for a sustainable community.",
+  "w": 700,
+  "h": 525
+ },
+ {
+  "slug": "malacanang-belmonte",
+  "cat": "government",
+  "caption": "At Malacañang Palace with colleagues from Congress and former Speaker of the House Feliciano Belmonte Jr.",
+  "w": 700,
+  "h": 525
+ },
+ {
+  "slug": "handshake",
+  "cat": "diplomacy",
+  "caption": "ASEAN Inter-Parliamentary Assembly — greeting a counterpart delegation.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "press-conference",
+  "cat": "press",
+  "caption": "Press conference — briefing the national press corps.",
+  "w": 700,
+  "h": 562
+ },
+ {
+  "slug": "foreign-affairs-cayetano",
+  "cat": "government",
+  "caption": "Committee on Foreign Affairs work with former Speaker of the House Alan Peter Cayetano.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "advocacy-stage",
+  "cat": "press",
+  "caption": "Speaking on ending violence against women and children.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "closing-message",
+  "cat": "press",
+  "caption": "Delivering the closing message at a national convening.",
+  "w": 644,
+  "h": 700
+ },
+ {
+  "slug": "press-feature",
+  "cat": "press",
+  "caption": "“The Promise of Youth” — national magazine feature.",
+  "w": 700,
+  "h": 452
+ },
+ {
+  "slug": "press-cover",
+  "cat": "press",
+  "caption": "Cover feature: “Sovereign, Driven, Femme.”",
+  "w": 559,
+  "h": 700
+ },
+ {
+  "slug": "district-children",
+  "cat": "district",
+  "caption": "In the district.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "district-youth",
+  "cat": "district",
+  "caption": "Youth engagement in the district.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "district-relief",
+  "cat": "district",
+  "caption": "Community distribution during a relief operation.",
+  "w": 700,
+  "h": 466
+ },
+ {
+  "slug": "district-roads",
+  "cat": "district",
+  "caption": "On the road in the district.",
+  "w": 700,
+  "h": 467
+ },
+ {
+  "slug": "district-field",
+  "cat": "district",
+  "caption": "Field visit in the district.",
+  "w": 700,
+  "h": 467
+ },
+ {
+  "slug": "district-constituents",
+  "cat": "district",
+  "caption": "Constituent day.",
+  "w": 700,
+  "h": 466
+ },
+ {
+  "slug": "district-farmers",
+  "cat": "district",
+  "caption": "In a cornfield with a constituent.",
+  "w": 700,
+  "h": 466
+ },
+ {
+  "slug": "district-elder",
+  "cat": "district",
+  "caption": "With an elderly constituent.",
+  "w": 700,
+  "h": 466
+ },
+ {
+  "slug": "columbia-commencement",
+  "cat": "academic",
+  "caption": "Commencement, Columbia University — Executive M.P.A., School of International and Public Affairs.",
+  "w": 466,
+  "h": 700
+ },
+ {
+  "slug": "columbia-campus",
+  "cat": "academic",
+  "caption": "Columbia University.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "bilateral-russia",
+  "cat": "diplomacy",
+  "caption": "Bilateral parliamentary meeting with a Russian delegation.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "k9-center",
+  "cat": "animals",
+  "caption": "At the K9 Rehabilitation and Retirement Center.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "k9-center-2",
+  "cat": "animals",
+  "caption": "Sponsor visit — K9 Rehabilitation and Retirement Center.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "k9-group",
+  "cat": "animals",
+  "caption": "At the K9 Rehabilitation and Retirement Center.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "shelter-dog",
+  "cat": "animals",
+  "caption": "One of the shelter dogs.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "shelter-dog-2",
+  "cat": "animals",
+  "caption": "At the sanctuary.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "shelter-dog-3",
+  "cat": "animals",
+  "caption": "At the sanctuary.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "shelter-pack",
+  "cat": "animals",
+  "caption": "Feeding time at the sanctuary.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "shelter-dog-4",
+  "cat": "animals",
+  "caption": "One of the sanctuary dogs.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "shelter-walk",
+  "cat": "animals",
+  "caption": "At the sanctuary.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "paris-graduation-advisor",
+  "cat": "academic",
+  "caption": "Graduation, American Graduate School in Paris.",
+  "w": 466,
+  "h": 700
+ },
+ {
+  "slug": "paris-graduation-cohort",
+  "cat": "academic",
+  "caption": "Double Master's graduation — American Graduate School in Paris & Université Paris-Saclay.",
+  "w": 700,
+  "h": 466
+ },
+ {
+  "slug": "paris-graduation-classmates",
+  "cat": "academic",
+  "caption": "With classmates after the Paris ceremony.",
+  "w": 700,
+  "h": 466
+ },
+ {
+  "slug": "columbia-lawn",
+  "cat": "academic",
+  "caption": "Columbia University, Morningside Heights.",
+  "w": 527,
+  "h": 700
+ },
+ {
+  "slug": "joint-session-canvass",
+  "cat": "government",
+  "caption": "At the Joint Session of Congress for the 2022 presidential and vice-presidential canvass.",
+  "w": 525,
+  "h": 700
+ },
+ {
+  "slug": "president-event",
+  "cat": "government",
+  "caption": "With the President at a national event.",
+  "w": 602,
+  "h": 700
+ },
+ {
+  "slug": "assembly-arena",
+  "cat": "district",
+  "caption": "A national assembly.",
+  "w": 527,
+  "h": 700
+ },
+ {
+  "slug": "assembly-tent",
+  "cat": "district",
+  "caption": "Community assembly.",
+  "w": 527,
+  "h": 700
+ },
+ {
+  "slug": "relief-goods",
+  "cat": "district",
+  "caption": "Distributing relief goods to an indigenous community.",
+  "w": 700,
+  "h": 467
+ },
+ {
+  "slug": "relief-feeding",
+  "cat": "district",
+  "caption": "Feeding programme during a community outreach.",
+  "w": 700,
+  "h": 467
+ },
+ {
+  "slug": "home-visit",
+  "cat": "district",
+  "caption": "House-to-house visit — helping a constituent down from his home.",
+  "w": 700,
+  "h": 466
+ },
+ {
+  "slug": "campaign-bw",
+  "cat": "district",
+  "caption": "Campaigning for Congress.",
+  "w": 630,
+  "h": 700
+ }
+]

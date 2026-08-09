@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Samantha Vargas-Markham</title>
+<meta name="description" content="Handa's guardrail architecture, the WPS Maritime Tracker's evidentiary chain of custody, the Margins Studio autonomous agent and its moderation gate, SolBound incentive design, and The Canary in the Dragnet.">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23171512'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='Georgia,serif' fill='%23B0432A'>S</text></svg>">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="index.html">Samantha <span>Vargas-Markham</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu">☰</button>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="writing.html">Writing</a>
+      <a href="interests.html">Beyond Work</a>
+      <a class="nav-cta" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding-block:clamp(2.5rem,6vw,4rem) clamp(2rem,4vw,3rem)">
+    <div class="wrap">
+      <p class="eyebrow">Applied work</p>
+      <h1 style="max-width:20ch">Five systems, one question.</h1>
+      <p class="lede measure" style="margin-top:1.2rem">
+        What happens when an automated system makes a consequential decision about someone who has no standing to
+        contest it — and who decides what the system is not allowed to do? Each project below is one answer,
+        built rather than argued.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= HANDA ================= -->
+  <section class="section" id="handa" style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow reveal">Project 01 — 2024 to present</p>
+      <div class="split reveal" style="align-items:start">
+        <div>
+          <h2>Handa</h2>
+          <p class="entry__role" style="margin-top:.6rem">Model guardrails &amp; escalation for AI legal aid</p>
+          <p class="lede" style="margin-top:1.2rem">
+            A responsible-AI legal-aid platform for overseas Filipino workers, built on the Claude API. The users are
+            people facing wage theft, passport confiscation and contract substitution, usually in a jurisdiction that
+            offers them no remedy, usually not in their first language, usually with no lawyer and no leverage.
+          </p>
+          <p>
+            That user profile sets the entire safety posture. A confidently wrong answer here is not an embarrassing
+            screenshot; it is somebody acting on bad legal guidance in a country where the mistake cannot be undone.
+            So the design question was never "what can the model do." It was "what is the model not allowed to do,
+            and what happens at the boundary."
+          </p>
+        </div>
+        <figure style="margin:0">
+          <img src="assets/img/district-elder-t.jpg" alt="Constituent consultation in the field" loading="lazy">
+          <figcaption style="font:.72rem/1.5 var(--mono);letter-spacing:.06em;color:var(--ink-3);margin-top:.7rem;text-transform:uppercase">
+            The user Handa was designed for is the person I spent ten years representing.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="cards reveal" style="margin-top:3rem">
+        <article class="card">
+          <span class="card__tag">The rule set</span>
+          <h3>Answer, escalate, or refuse</h3>
+          <p>
+            Every query resolves into one of three outcomes. The model may answer directly where guidance is
+            general and low-risk. It must route to a human reviewer where the stakes are individual and legal. It
+            must refuse outright where an answer would constitute advice it has no basis to give.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__tag">The gate</span>
+          <h3>Evaluate before you show</h3>
+          <p>
+            Pre-response evaluation for accuracy, bias and hallucination, with confidence-threshold gating. The
+            harness exists to answer one question before anything reaches a user: is this safe to show a worker
+            with no lawyer?
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__tag">The assumption</span>
+          <h3>The model will be confidently wrong</h3>
+          <p>
+            The escalation path is designed on that premise rather than against it. Red-teaming targets the
+            specific failure modes that matter here — hallucinated legal guidance, biased outputs, unsafe
+            autonomous action — and each finding becomes an intervention checkpoint.
+          </p>
+        </article>
+      </div>
+
+      <div class="split reveal" style="margin-top:3rem;align-items:start">
+        <div>
+          <h3>How it is built</h3>
+          <ul class="ticks" style="margin-top:1rem">
+            <li><strong>Front end</strong> — React Native, so it reaches workers on the phone they already have.</li>
+            <li><strong>Reasoning layer</strong> — the Claude API, with prompts and evaluation criteria written in house.</li>
+            <li><strong>Services</strong> — Node.js.</li>
+            <li><strong>Data</strong> — Supabase.</li>
+            <li><strong>Review loop</strong> — an evaluation harness that tests guardrail decisions against real queries rather than synthetic ones.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Who it is built with</h3>
+          <p style="margin-top:1rem">
+            A six-tier partner ecosystem spanning government, multilateral, NGO, technology and legal organisations —
+            including OWWA, the International Labour Organization, Lawyers Without Borders and Migrant Forum in Asia
+            — mapped onto co-marketing and co-delivery pathways.
+          </p>
+          <div class="callout" style="margin-top:1.4rem">
+            <p><strong>Addressable population:</strong> more than two million overseas Filipino workers. Every
+            function — product strategy, build, partner development, go-to-market — run by one person.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WPS TRACKER ================= -->
+  <section class="section section--tint" id="wps">
+    <div class="wrap">
+      <p class="eyebrow reveal">Project 02 — ongoing</p>
+      <h2 class="reveal">WPS Maritime Tracker</h2>
+      <p class="entry__role reveal" style="margin-top:.6rem">An incident-to-award evidentiary tracker for the West Philippine Sea</p>
+      <p class="lede measure reveal" style="margin-top:1.2rem">
+        As a legislator I represented the Philippines in ASEAN fora negotiating West Philippine Sea maritime rules.
+        This is the same dispute, approached with a different instrument: every incident — water cannon, ramming,
+        blocking, laser, boarding and seizure, militia swarming, environmental harm — recorded as a structured case
+        record that maps the act to specific <strong>UNCLOS articles</strong>, <strong>COLREGs rules</strong>, and
+        holdings of the <strong>2016 South China Sea Arbitral Award</strong> (PCA Case No. 2013-19).
+      </p>
+      <p class="measure reveal">
+        The fields are informed by the Berkeley Protocol on Digital Open Source Investigations: provenance, chain of
+        custody, source tiering, and a methodology that can be disclosed to an opposing party. It is built for the
+        people who would actually have to file — the Solicitor General's office, Coast Guard legal, AMTI and
+        Stratbase, international counsel — rather than for a dashboard screenshot.
+      </p>
+
+      <div class="stats reveal" style="margin-top:2.5rem">
+        <div class="stat"><div class="stat__n">16</div><div class="stat__l">Case records, 2023–2026, each mapped to the award</div></div>
+        <div class="stat"><div class="stat__n">4</div><div class="stat__l">Features covered: Ayungin, Bajo de Masinloc, Escoda, Iroquois Reef</div></div>
+        <div class="stat"><div class="stat__n">10</div><div class="stat__l">Act types in the controlled taxonomy</div></div>
+        <div class="stat"><div class="stat__n">44</div><div class="stat__l">Tiered sources, primary separated from wire coverage</div></div>
+      </div>
+
+      <div class="cards reveal" style="margin-top:2.5rem">
+        <article class="card">
+          <span class="card__tag">Custody</span>
+          <h3>Tamper-evident by construction</h3>
+          <p>
+            The custody log is an append-only SHA-256 hash chain: each entry commits to its own row <em>and</em> the
+            previous entry's hash, with fields joined on a separator that cannot occur in any field — so an attacker
+            cannot shuffle bytes across a field boundary without breaking the chain. Updates and deletes are blocked
+            at the database by triggers, and digests are anchored via OpenTimestamps. Any evidence item with an
+            empty custody log is flagged <strong>not filing-ready</strong> in the interface.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__tag">Disclosure</span>
+          <h3>Publication is a whitelist</h3>
+          <p>
+            A record is public only if it is marked stable <em>and</em> its feature sits in an active corpus phase.
+            Only views named <code>v_pub_*</code> may ever be wired to a route; internal, ungated views keep plain
+            names and are structurally barred from public exposure. Expanding scope is a single data change, not a
+            code change — which means the decision about what is disclosed is reviewable rather than buried in a
+            handler.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__tag">Epistemics</span>
+          <h3>Honest about what it doesn't know</h3>
+          <p>
+            Award paragraph numbers are marked unverified against the primary text, and every citation in the UI
+            says so. AIS is self-reported, and militia vessels run dark — so absence of a track is not absence of a
+            ship, and the app says that on the layer itself. Proximity is correlation, not proof. Confidence
+            reflects reporting quality, not independent verification.
+          </p>
+        </article>
+      </div>
+
+      <div class="split reveal" style="margin-top:3rem;align-items:start">
+        <div>
+          <h3>Where the AI sits — and where it is not allowed to</h3>
+          <p style="margin-top:1rem">
+            A refresh pipeline pulls open-source reporting and asks Claude to structure genuine incidents into the
+            schema. Every record it produces enters as a <strong>draft</strong> — written with confidence
+            <code>reported</code> and verification status <code>unverified</code> — and cannot reach the published
+            view without human adjudication.
+          </p>
+          <p>
+            That is the same rule as Handa, in a domain where the stakes are a filing rather than a wage claim: the
+            model proposes, a human disposes, and the boundary between the two is enforced by the data model instead
+            of by good intentions.
+          </p>
+        </div>
+        <div class="callout">
+          <p><strong>Corroboration from independent data.</strong> Each dossier auto-queries Global Fishing Watch
+          for encounter, loitering and AIS-gap events within ±7 days and 75 km of the incident, sorted by distance
+          and day-offset and plotted on the locator map.</p>
+          <p>The 17 June 2024 Ayungin boarding surfaces <strong>250+ Sansha-registered vessels loitering 4–9 km
+          away on the same day</strong> — a maritime-militia swarm corroborated from an entirely independent AIS
+          source. Flagged in-app as correlation, not proof.</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-top:2.5rem">
+        <h3>How it is built</h3>
+        <ul class="ticks" style="margin-top:1rem">
+          <li><strong>Local</strong> — a zero-dependency Node server, bound to localhost only and explicitly never to be exposed without auth.</li>
+          <li><strong>Hosted</strong> — a Cloudflare Worker with every route behind an HMAC-signed session; API tokens live as Worker secrets and never reach the browser.</li>
+          <li><strong>Data</strong> — a versioned SQL schema (nine migrations) covering provenance, append-only custody, custody anchors, harm and venue extension, vessel minimisation, and population-aware harm views.</li>
+          <li><strong>Interface</strong> — a naval-HUD map console: incidents as contacts, features as sectors, and a per-incident dossier carrying the legal mapping, evidence chain and corroboration.</li>
+        </ul>
+        <p class="measure" style="margin-top:1.4rem;color:var(--ink-3);font-size:.93rem">
+          The deployment is password-gated and the corpus is deliberately scoped, so there is no public link here.
+          A walkthrough is available on request.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MARGINS ================= -->
+  <section class="section" id="margins">
+    <div class="wrap">
+      <p class="eyebrow reveal">Project 03 — 2025 to present</p>
+      <h2 class="reveal">the Margins Studio</h2>
+      <p class="entry__role reveal" style="margin-top:.6rem">An autonomous storefront agent, and the gate that stops it</p>
+      <p class="lede measure reveal" style="margin-top:1.2rem">
+        A print-on-demand business that runs itself. Claude Vision analyses the source artwork; the agent selects
+        Printify products, generates SEO-optimised listings, and publishes them to Etsy. There is no human in the
+        loop — except at the gate.
+      </p>
+
+      <div class="reveal" style="margin-top:2.5rem">
+        <h3>The pipeline</h3>
+        <ol class="ticks" style="list-style:none;margin-top:1.2rem">
+          <li><strong>1 · Vision.</strong> Claude Vision analyses the artwork — subject, palette, style, likely audience.</li>
+          <li><strong>2 · Selection.</strong> The agent maps the analysis onto a product catalogue and picks what the design should be printed on.</li>
+          <li><strong>3 · Generation.</strong> The agent writes the listing: title, description, tags, SEO surface.</li>
+          <li><strong>4 · <code>gate.js</code>.</strong> Every generated listing is screened against quality, brand and IP criteria. Failures are blocked before publication.</li>
+          <li><strong>5 · Publish.</strong> What survives the gate goes live automatically.</li>
+          <li><strong>6 · <code>feedback.js</code>.</strong> A weekly digest lands in Telegram, measuring the agent's output against sales and listing quality — so performance is observed, not assumed.</li>
+        </ol>
+      </div>
+
+      <div class="split reveal" style="margin-top:3rem;align-items:start">
+        <div class="callout">
+          <p><strong>Why the gate is the interesting part.</strong> Any competent developer can wire a model to an
+          API and publish the output. The hard question — the trust and safety question — is what the system is
+          <em>not</em> allowed to ship, who writes that rule, and what happens to the things it catches.</p>
+          <p><code>gate.js</code> is a small, working instance of automated enforcement with a hand-defined rule set,
+          an appeal path that runs through me, and a measurable false-positive cost. It is the same structure a
+          platform runs at four orders of magnitude more volume.</p>
+        </div>
+        <div>
+          <h3>What it demonstrates</h3>
+          <ul class="ticks" style="margin-top:1rem">
+            <li>Agentic pipeline design with a deliberate human checkpoint.</li>
+            <li>Automated enforcement against a written rule set.</li>
+            <li>A closed evaluation loop rather than fire-and-forget automation.</li>
+            <li>Single-operator P&amp;L ownership across four marketplaces.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOLBOUND ================= -->
+  <section class="section section--tint" id="solbound">
+    <div class="wrap">
+      <p class="eyebrow reveal">Project 04 — prototype</p>
+      <div class="split reveal" style="align-items:start">
+        <div>
+          <h2>SolBound</h2>
+          <p class="entry__role" style="margin-top:.6rem">Incentive design and abuse resistance</p>
+          <p class="lede" style="margin-top:1.2rem">
+            A sober-to-earn recovery application built for the Solana Seeker device ecosystem. I designed the reward
+            mechanics and the abuse-resistance model.
+          </p>
+          <p>
+            The central problem is a genuinely hard one: how do you reward a behaviour that only the user can verify,
+            without building an obvious exploit — and without the exploit falling hardest on the people the system
+            was meant to help? Recovery is exactly the domain where a naive incentive does damage, because the
+            population is vulnerable and the failure is invisible.
+          </p>
+        </div>
+        <div class="callout">
+          <p><strong>Why it is on this page.</strong> It is the range project. Handa is guardrails on language;
+          the Margins Studio is enforcement on output. SolBound is the third form of the same problem — designing a
+          system that cannot be gamed by the person it is trying to help, and being honest about where that
+          guarantee runs out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CANARY ================= -->
+  <section class="section" id="canary">
+    <div class="wrap">
+      <p class="eyebrow reveal">Project 05 — 2026</p>
+      <h2 class="reveal">The Canary in the Dragnet</h2>
+      <p class="entry__role reveal" style="margin-top:.6rem">Original policy research on AI surveillance and migration</p>
+      <blockquote class="pull reveal">
+        The surveillance future we are warned is coming for everyone is already operational — on migrants, refugees
+        and asylum seekers, who have the least legal standing to refuse it and the least visibility into it.
+        <cite>Proposal abstract</cite>
+      </blockquote>
+      <p class="lede measure reveal">
+        The argument: border and refugee spaces function as low-oversight testing grounds for emerging technology.
+        Biometric mass-collection, behavioural risk-scoring and location-data brokering are normalised on
+        non-citizens first, then diffuse to citizens. Which makes migrant-rights failure a leading indicator of
+        general AI governance failure, not a niche concern adjacent to it.
+      </p>
+      <div class="btn-row reveal" style="margin-top:1.6rem">
+        <a class="btn" href="contact.html">Request the full proposal</a>
+        <a class="btn btn--ghost" href="writing.html#canary">The research in context</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="wrap-narrow" style="text-align:center">
+      <h2 class="reveal">The through-line</h2>
+      <p class="lede reveal" style="margin:1.2rem auto 2rem;max-width:58ch">
+        Ten years writing rules for institutions, and three building systems that have to obey them. Both halves of
+        the problem, from both sides of the table.
+      </p>
+      <div class="btn-row reveal" style="justify-content:center">
+        <a class="btn" href="contact.html">Get in touch</a>
+        <a class="btn btn--ghost" href="experience.html">Full experience</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div class="foot">
+        <h4>Samantha Vargas-Markham</h4>
+        <p style="color:var(--ink-2);font-size:.93rem;max-width:40ch">
+          Policy, governance and applied AI. Brooklyn, New York.<br>
+          U.S. Permanent Resident — authorized to work without sponsorship.
+        </p>
+      </div>
+      <div class="foot">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="writing.html">Writing &amp; research</a></li>
+          <li><a href="interests.html">Beyond work</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="mailto:sa4292@columbia.edu">sa4292@columbia.edu</a></li>
+          <li><a href="https://www.linkedin.com/in/samantha-vargas-markham" rel="me noopener">LinkedIn</a></li>
+          <li><a href="resume.html">Résumé</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__note">
+      <span>© <span id="yr">2026</span> Samantha Vargas-Markham. Previously published as S. L. V. Alfonso.</span>
+      <span>English · Français · Tagalog</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
