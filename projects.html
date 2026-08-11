@@ -36,7 +36,7 @@
       <p class="lede measure" style="margin-top:1.2rem">
         What happens when an automated system makes a consequential decision about someone who has no standing to
         contest it — and who decides what the system is not allowed to do? Each project below is one answer,
-        built rather than argued.
+        built and running.
       </p>
     </div>
   </section>
@@ -55,10 +55,9 @@
             offers them no remedy, usually not in their first language, usually with no lawyer and no leverage.
           </p>
           <p>
-            That user profile sets the entire safety posture. A confidently wrong answer here is not an embarrassing
-            screenshot; it is somebody acting on bad legal guidance in a country where the mistake cannot be undone.
-            So the design question was never "what can the model do." It was "what is the model not allowed to do,
-            and what happens at the boundary."
+            That user profile sets the entire safety posture. A confidently wrong answer here means somebody acts on
+            bad legal guidance in a country where the mistake cannot be undone. So the design question became the
+            boundary itself: which answers the model may give, and what happens at the edge of that permission.
           </p>
         </div>
         <figure style="margin:0">
@@ -92,7 +91,7 @@
           <span class="card__tag">The assumption</span>
           <h3>The model will be confidently wrong</h3>
           <p>
-            The escalation path is designed on that premise rather than against it. Red-teaming targets the
+            The escalation path is designed on that premise. Red-teaming targets the
             specific failure modes that matter here — hallucinated legal guidance, biased outputs, unsafe
             autonomous action — and each finding becomes an intervention checkpoint.
           </p>
@@ -107,7 +106,7 @@
             <li><strong>Reasoning layer</strong> — the Claude API, with prompts and evaluation criteria written in house.</li>
             <li><strong>Services</strong> — Node.js.</li>
             <li><strong>Data</strong> — Supabase.</li>
-            <li><strong>Review loop</strong> — an evaluation harness that tests guardrail decisions against real queries rather than synthetic ones.</li>
+            <li><strong>Review loop</strong> — an evaluation harness that tests guardrail decisions against real queries.</li>
           </ul>
         </div>
         <div>
@@ -142,8 +141,8 @@
       <p class="measure reveal">
         The fields are informed by the Berkeley Protocol on Digital Open Source Investigations: provenance, chain of
         custody, source tiering, and a methodology that can be disclosed to an opposing party. It is built for the
-        people who would actually have to file — the Solicitor General's office, Coast Guard legal, AMTI and
-        Stratbase, international counsel — rather than for a dashboard screenshot.
+        people who would actually have to file: the Solicitor General's office, Coast Guard legal, AMTI and
+        Stratbase, and international counsel.
       </p>
 
       <div class="stats reveal" style="margin-top:2.5rem">
@@ -171,9 +170,9 @@
           <p>
             A record is public only if it is marked stable <em>and</em> its feature sits in an active corpus phase.
             Only views named <code>v_pub_*</code> may ever be wired to a route; internal, ungated views keep plain
-            names and are structurally barred from public exposure. Expanding scope is a single data change, not a
-            code change — which means the decision about what is disclosed is reviewable rather than buried in a
-            handler.
+            names and are structurally barred from public exposure. Expanding scope is a single data
+            change — which means the decision about what is disclosed stays in one reviewable
+            place.
           </p>
         </article>
         <article class="card">
@@ -198,9 +197,9 @@
             view without human adjudication.
           </p>
           <p>
-            That is the same rule as Handa, in a domain where the stakes are a filing rather than a wage claim: the
-            model proposes, a human disposes, and the boundary between the two is enforced by the data model instead
-            of by good intentions.
+            That is the same rule as Handa, in a domain where the stakes are a filing: the
+            model proposes, a human disposes, and the boundary between the two is enforced by the data model
+            itself.
           </p>
         </div>
         <div class="callout">
@@ -267,7 +266,7 @@
           <ul class="ticks" style="margin-top:1rem">
             <li>Agentic pipeline design with a deliberate human checkpoint.</li>
             <li>Automated enforcement against a written rule set.</li>
-            <li>A closed evaluation loop rather than fire-and-forget automation.</li>
+            <li>A closed evaluation loop, measured weekly against sales.</li>
             <li>Single-operator P&amp;L ownership across four marketplaces.</li>
           </ul>
         </div>
@@ -319,7 +318,7 @@
         The argument: border and refugee spaces function as low-oversight testing grounds for emerging technology.
         Biometric mass-collection, behavioural risk-scoring and location-data brokering are normalised on
         non-citizens first, then diffuse to citizens. Which makes migrant-rights failure a leading indicator of
-        general AI governance failure, not a niche concern adjacent to it.
+        general AI governance failure.
       </p>
       <div class="btn-row reveal" style="margin-top:1.6rem">
         <a class="btn" href="contact.html">Request the full proposal</a>

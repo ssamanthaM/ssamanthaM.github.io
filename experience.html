@@ -95,7 +95,7 @@
             <div class="deep__body">
               <p><strong>Trust &amp; safety / AI safety.</strong> This is a live deployment where the cost of a wrong
               answer is somebody's immigration status or unpaid wages. I wrote the harm taxonomy, the escalation
-              thresholds and the refusal policy, and I test them against real queries rather than hypotheticals.</p>
+              thresholds and the refusal policy, and I test them against real queries drawn from the product.</p>
               <p><strong>AI policy &amp; governance.</strong> Guardrail policy written by someone who has also
               drafted and passed statute — which means it is written to be operationalised by non-lawyers under time
               pressure, not to read well in a whitepaper.</p>
@@ -128,12 +128,12 @@
             <li>
               <strong>Built <code>gate.js</code></strong>, a pre-publish moderation layer that screens every
               AI-generated listing against quality, brand and IP criteria and blocks the ones that fail. A working
-              automated-enforcement checkpoint with a hand-defined rule set — the core trust-and-safety question is
-              not "can the model do this" but "what is it not allowed to ship, and who decides."
+              automated-enforcement checkpoint with a hand-defined rule set. The core trust-and-safety question is
+              which outputs a system may ship, and who draws that line.
             </li>
             <li>
               <strong>Built <code>feedback.js</code></strong>, a weekly performance digest pushed to Telegram, so the
-              agent's output is measured against sales and listing quality rather than assumed to be working.
+              agent's output is measured against sales and listing quality every week.
             </li>
             <li>
               <strong>Operate a multi-platform commerce business</strong> across Etsy, Depop, eBay and Poshmark —
@@ -148,8 +148,8 @@
           <details class="deep">
             <summary>Why a commerce side-project belongs on a policy résumé</summary>
             <div class="deep__body">
-              <p>Because it is the cleanest available proof that I build agentic systems rather than opinions about
-              them. An autonomous pipeline that publishes to the public internet needs an enforcement checkpoint, and
+              <p>Because it is the cleanest available proof that I build agentic systems, hands on the
+              code. An autonomous pipeline that publishes to the public internet needs an enforcement checkpoint, and
               somebody has to decide where it sits and what it blocks. I made those decisions, wrote the rules, and
               watch what they catch. That is the same problem a platform faces at four orders of magnitude more
               volume.</p>
@@ -179,10 +179,10 @@
               <strong>Designed a tamper-evident chain of custody</strong> — an append-only hash chain where each
               entry commits to its own row and the previous entry's hash, with updates and deletes blocked at the
               database and digests anchored via OpenTimestamps. Evidence with an empty custody log is flagged
-              <em>not filing-ready</em> rather than silently shown.
+              <em>not filing-ready</em> everywhere it appears.
             </li>
             <li>
-              <strong>Made disclosure a whitelist, not a judgement call</strong>: a record is public only if it is
+              <strong>Made disclosure a standing rule</strong>: a record is public only if it is
               adjudicated stable and its feature is in an active corpus phase, and only views explicitly named as
               public may be served by a route.
             </li>
@@ -190,7 +190,7 @@
               <strong>Put the LLM behind the gate.</strong> A Claude-driven pipeline structures open-source
               reporting into the schema, but every record it produces enters as an unverified draft that cannot
               reach the published view without human adjudication — the same discipline as Handa, applied to
-              evidence rather than advice.
+              evidence.
             </li>
             <li>
               <strong>Corroborates from independent data:</strong> automatic Global Fishing Watch correlation of
@@ -204,12 +204,12 @@
             <span class="tag">Human-in-the-loop</span><span class="tag">OSINT</span>
           </div>
           <details class="deep">
-            <summary>Why this sits next to the AI work rather than apart from it</summary>
+            <summary>Why this sits next to the AI work</summary>
             <div class="deep__body">
               <p>Because it is the same governance problem with the stakes moved. Handa decides what a model may
               tell a worker with no lawyer. This decides what a model-assisted record may claim in something that
               could end up in front of counsel. In both, the interesting engineering is the boundary — and in both,
-              the boundary is enforced by the data model rather than by anyone's good intentions.</p>
+              the boundary is enforced by the data model itself.</p>
               <p>It is also the only project on this list that closes a loop with my own legislative record: I
               negotiated maritime rules on these features at the ASEAN Inter-Parliamentary Assembly, and this is the
               evidentiary system for the dispute those rules were meant to govern.</p>
