@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects — Samantha Vargas-Markham</title>
-<meta name="description" content="Handa's guardrail architecture, the WPS Maritime Tracker's evidentiary chain of custody, the Margins Studio autonomous agent and its moderation gate, SolBound incentive design, and The Canary in the Dragnet.">
+<meta name="description" content="Handa's guardrails and lawyer gate, the WPS Maritime Tracker's evidentiary chain of custody, the Margins Studio autonomous agent and its moderation gate, SolBound incentive design, and The Canary in the Dragnet.">
 <meta name="author" content="Samantha Vargas-Markham">
 <link rel="canonical" href="https://ssamantham.github.io/projects.html">
 <meta property="og:site_name" content="Samantha Vargas-Markham">
 <meta property="og:title" content="Projects — Samantha Vargas-Markham">
-<meta property="og:description" content="Handa's guardrail architecture, the WPS Maritime Tracker's evidentiary chain of custody, the Margins Studio autonomous agent and its moderation gate, SolBound incentive design, and The Canary in the Dragnet.">
+<meta property="og:description" content="Handa's guardrails and lawyer gate, the WPS Maritime Tracker's evidentiary chain of custody, the Margins Studio autonomous agent and its moderation gate, SolBound incentive design, and The Canary in the Dragnet.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ssamantham.github.io/projects.html">
 <meta property="og:image" content="https://ssamantham.github.io/assets/img/og-card.jpg">
@@ -63,16 +63,16 @@
       <div class="split reveal" style="align-items:start">
         <div>
           <h2>Handa</h2>
-          <p class="entry__role" style="margin-top:.6rem">Model guardrails &amp; escalation for AI legal aid</p>
+          <p class="entry__role" style="margin-top:.6rem">Guardrails, escalation and a lawyer gate for legal aid</p>
           <p class="lede" style="margin-top:1.2rem">
-            A responsible-AI legal-aid platform for overseas Filipino workers, built on the Claude API. The users are
+            A legal-aid tool for overseas Filipino workers in the Gulf, live as a pre-launch prototype. The users are
             people facing wage theft, passport confiscation and contract substitution, usually in a jurisdiction that
             offers them no remedy, usually not in their first language, usually with no lawyer and no leverage.
           </p>
           <p>
             That user profile sets the entire safety posture. A confidently wrong answer here means somebody acts on
             bad legal guidance in a country where the mistake cannot be undone. So the design question became the
-            boundary itself: which answers the model may give, and what happens at the edge of that permission.
+            boundary itself: what the tool may tell a worker, and what happens at the edge of that permission.
           </p>
           <div class="btn-row" style="margin-top:1.4rem">
             <a class="btn btn--ghost" href="https://handahelp.org/" rel="noopener">handahelp.org</a>
@@ -89,29 +89,29 @@
       <div class="cards reveal" style="margin-top:3rem">
         <article class="card">
           <span class="card__tag">The rule set</span>
-          <h3>Answer, escalate, or refuse</h3>
+          <h3>Ask, act, assist, protect</h3>
           <p>
-            Every query resolves into one of three outcomes. The model may answer directly where guidance is
-            general and low-risk. It must route to a human reviewer where the stakes are individual and legal. It
-            must refuse outright where an answer would constitute advice it has no basis to give.
+            Every intake resolves into one of four tiers: self-serve information, a guided pathway, a caseworker
+            hand-off with consent, or emergency escalation to a human. Any hard trafficking flag, or two safety
+            indicators together, routes to Protect and suppresses self-filing instructions.
           </p>
         </article>
         <article class="card">
           <span class="card__tag">The gate</span>
-          <h3>Evaluate before you show</h3>
+          <h3>Nothing verified until a lawyer signs</h3>
           <p>
-            Pre-response evaluation for accuracy, bias and hallucination, with confidence-threshold gating. The
-            harness exists to answer one question before anything reaches a user: is this safe to show a worker
-            with no lawyer?
+            All legal pathway content displays in an amber “being reviewed by our lawyers” state until licensed
+            counsel in the relevant jurisdiction signs it off. Where two sources conflict, as on Kuwait's
+            absconding rule, the claim is withdrawn in every state until counsel resolves it.
           </p>
         </article>
         <article class="card">
           <span class="card__tag">The assumption</span>
-          <h3>The model will be confidently wrong</h3>
+          <h3>The tool will be wrong somewhere</h3>
           <p>
-            The escalation path is designed on that premise. Red-teaming targets the
-            specific failure modes that matter here — hallucinated legal guidance, biased outputs, unsafe
-            autonomous action — and each finding becomes an intervention checkpoint.
+            So it is attacked before release. A red-team harness of nine modules drives the real app in a headless
+            browser — every possible intake, random walks, timer races, a phone handed to a second person,
+            planted-bug mutation testing — and is written to block a deploy on any new critical or high finding.
           </p>
         </article>
       </div>
@@ -120,23 +120,23 @@
         <div>
           <h3>How it is built</h3>
           <ul class="ticks" style="margin-top:1rem">
-            <li><strong>Front end</strong> — React Native, so it reaches workers on the phone they already have.</li>
-            <li><strong>Reasoning layer</strong> — the Claude API, with prompts and evaluation criteria written in house.</li>
-            <li><strong>Services</strong> — Node.js.</li>
-            <li><strong>Data</strong> — Supabase.</li>
-            <li><strong>Review loop</strong> — an evaluation harness that tests guardrail decisions against real queries.</li>
+            <li><strong>Front end</strong> — hand-written HTML and vanilla JavaScript, light enough for a basic Android phone on a poor connection.</li>
+            <li><strong>Languages</strong> — Tagalog, English and Arabic, with right-to-left layout.</li>
+            <li><strong>Hosting</strong> — Cloudflare Workers, with no database, no accounts and no analytics, by design: the users may be under employer surveillance.</li>
+            <li><strong>No language model</strong> in the worker-facing prototype — a deliberate decision until legal content is counsel-verified. Model routing is specified for a later phase.</li>
+            <li><strong>Guardrails</strong> — thirteen written rules with stable IDs, checked before every deploy.</li>
           </ul>
         </div>
         <div>
           <h3>Who it is built with</h3>
           <p style="margin-top:1rem">
-            A six-tier partner ecosystem spanning government, multilateral, NGO, technology and legal organisations —
-            including OWWA, the International Labour Organization, Lawyers Without Borders and Migrant Forum in Asia
-            — mapped onto co-marketing and co-delivery pathways.
+            Engaging Migrant Forum in Asia, where I used to work, and its Lawyers Beyond Borders network ahead of
+            launch. Verification of the legal content by licensed counsel is the critical path.
           </p>
           <div class="callout" style="margin-top:1.4rem">
-            <p><strong>Addressable population:</strong> more than two million overseas Filipino workers. Every
-            function — product strategy, build, partner development, go-to-market — run by one person.</p>
+            <p><strong>Status:</strong> pre-launch prototype running on sample data; no legal content is
+            counsel-verified yet. <strong>Addressable population:</strong> more than two million overseas Filipino
+            workers. Every function — product strategy, build, partner development, go-to-market — run by one person.</p>
           </div>
         </div>
       </div>

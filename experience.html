@@ -87,28 +87,31 @@
         </div>
         <div>
           <h3>Handa</h3>
-          <p class="entry__role">Founder &amp; Chief Executive — responsible-AI legal-aid platform</p>
+          <p class="entry__role">Founder &amp; Chief Executive — legal-aid tool for overseas Filipino workers, pre-launch</p>
           <ul class="ticks">
             <li>
-              <strong>Own the full safety surface</strong> of an agentic legal-aid product built on the Claude API:
-              pre-response evaluation for accuracy, bias and hallucination; confidence-threshold gating; explicit
-              refusal behaviour; and human escalation for high-stakes cases affecting a vulnerable,
-              non-English-first user population.
+              <strong>Own the full safety surface</strong> of a legal-aid tool for overseas Filipino workers in
+              the Gulf: a four-tier triage in which trafficking indicators route to a human and suppress
+              self-filing instructions, and a mandatory absconding warning on every leave-employer route.
             </li>
             <li>
-              <strong>Red-team the deployment</strong> against its real failure modes — hallucinated legal guidance,
-              biased outputs, unsafe autonomous actions — and translate the findings into concrete guardrails and
-              intervention checkpoints, on the working assumption that the model will sometimes be confidently wrong.
+              <strong>Wrote thirteen guardrails</strong> with stable IDs, checked before every deploy, including a
+              lawyer gate: no legal pathway displays as verified until licensed counsel in the relevant
+              jurisdiction signs it off. The prototype deliberately uses no language model.
             </li>
             <li>
-              <strong>Architected the product end to end:</strong> React Native front end, Claude API reasoning
-              layer, Node.js services, Supabase backend, and the evaluation harness that decides whether an answer
-              is safe to show a worker with no lawyer and no leverage.
+              <strong>Built a red-team harness</strong> of nine attack modules that drives the real app in a
+              headless browser — every possible intake, random walks, timer races, a phone handed to a second
+              person, planted-bug mutation testing — written to block a deploy on any new critical or high finding.
             </li>
             <li>
-              <strong>Built the partner ecosystem</strong> across government, multilateral, NGO, technology and legal
-              organisations — OWWA, the ILO, Lawyers Without Borders and Migrant Forum in Asia — mapped onto
-              co-marketing and co-delivery pathways.
+              <strong>Built the product end to end:</strong> a hand-written web app (HTML, vanilla JavaScript) on
+              Cloudflare Workers, trilingual in Tagalog, English and Arabic with right-to-left support, with no
+              database or accounts by design. Claude model routing is specified for a later AI-assisted phase.
+            </li>
+            <li>
+              <strong>Built the institutional side in parallel,</strong> engaging Migrant Forum in Asia and its
+              Lawyers Beyond Borders network ahead of launch.
             </li>
             <li>
               <strong>Run every function solo:</strong> product strategy, build, partner development, positioning and
@@ -116,28 +119,30 @@
             </li>
           </ul>
           <div class="tags">
-            <span class="tag">Claude API</span><span class="tag">Guardrail design</span><span class="tag">Red-teaming</span>
-            <span class="tag">React Native</span><span class="tag">Node.js</span><span class="tag">Supabase</span>
+            <span class="tag">Guardrail design</span><span class="tag">Red-teaming</span><span class="tag">Safety-critical design</span>
+            <span class="tag">Cloudflare Workers</span><span class="tag">Trilingual / RTL</span>
             <span class="tag">Access to justice</span>
           </div>
 
           <details class="deep">
             <summary>What this role means, depending on what you're hiring for</summary>
             <div class="deep__body">
-              <p><strong>Trust &amp; safety / AI safety.</strong> This is a live deployment where the cost of a wrong
-              answer is somebody's immigration status or unpaid wages. I wrote the harm taxonomy, the escalation
-              thresholds and the refusal policy, and I test them against real queries drawn from the product.</p>
+              <p><strong>Trust &amp; safety / AI safety.</strong> A pre-launch tool where the cost of a wrong
+              answer is somebody's immigration status or unpaid wages. I wrote the triage rules, the escalation
+              triggers and the guardrails, and I attack them with a red-team harness against the app as built.</p>
               <p><strong>AI policy &amp; governance.</strong> Guardrail policy written by someone who has also
               drafted and passed statute — which means it is written to be operationalised by non-lawyers under time
               pressure, not to read well in a whitepaper.</p>
-              <p><strong>Applied AI / product.</strong> Full-stack ownership: prompt design, evaluation harness,
-              mobile client, services and data layer, with direct accountability for output quality, safety and cost.</p>
+              <p><strong>Applied AI / product.</strong> Full ownership of a safety-critical build: flow logic,
+              trilingual interface, test harnesses and deployment. Keeping language models out of the worker-facing
+              prototype until the legal content is counsel-verified was my decision, and the model tiering for the
+              later phase is specified.</p>
               <p><strong>Multilateral &amp; philanthropy.</strong> A rights-centred technology intervention aimed at
               the access-to-justice gap for a population of two million-plus, built on top of a decade of
               civil-society relationships in the same corridor.</p>
             </div>
           </details>
-          <p style="margin-top:1rem"><a href="projects.html#handa">Read the guardrail architecture in detail →</a></p>
+          <p style="margin-top:1rem"><a href="projects.html#handa">Read the guardrails and lawyer gate in detail →</a></p>
         </div>
       </article>
 
@@ -237,7 +242,7 @@
           <details class="deep">
             <summary>Why this sits next to the AI work</summary>
             <div class="deep__body">
-              <p>Because it is the same governance problem with the stakes moved. Handa decides what a model may
+              <p>Because it is the same governance problem with the stakes moved. Handa decides what a tool may
               tell a worker with no lawyer. This decides what a model-assisted record may claim in something that
               could end up in front of counsel. In both, the interesting engineering is the boundary — and in both,
               the boundary is enforced by the data model itself.</p>
