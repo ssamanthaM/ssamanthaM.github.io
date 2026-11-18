@@ -38,6 +38,12 @@ this with the local server going, then commit the new file:
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf="assets/docs/SVMarkham-Resume.pdf" http://localhost:8777/site/resume.html
 ```
 
+Chrome stamps its own user-agent string into the PDF's Author field. Reset it afterwards:
+
+```bash
+python3 -c "from pypdf import PdfReader,PdfWriter as W;p='assets/docs/SVMarkham-Resume.pdf';w=W(clone_from=PdfReader(p));w.add_metadata({'/Author':'Samantha Vargas-Markham','/Title':'Samantha Vargas-Markham — Résumé'});w.write(p)"
+```
+
 ## Adding a photograph
 
 Put `slug.jpg` (about 1500px wide) and `slug-t.jpg` (about 700px) in `assets/img/`, then add an entry
